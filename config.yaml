@@ -1,0 +1,24 @@
+# Data setup
+dataset: CROHME # choices: [CROHME, HME100k]
+val_split: 0.1
+num_workers: 4
+# Training
+height: 128
+batch: 16
+epochs: 1
+lr: 2e-4
+seed: 22020503
+# Model
+use_lora: False
+#llm_name: Qwen/Qwen2.5-Coder-7B-Instruct
+llm_name: gpt2
+d_model: 256
+qformer_dim: 256
+qformer_heads: 8
+qformer_layers: 4
+num_queries: 16
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_modules: null
+use_8bit: True
